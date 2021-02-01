@@ -54,16 +54,29 @@ body{
   width: 70.5px;
   height: 31px;
   font-weight: bold;
-  background: -webkit-linear-gradient(top,#4387fd,#4683ea);
-  border: none;
+  background-color:#4387fd;
+  border: transparent;
   color: #ffffff;
   border-radius: 2px;
 }
 
 
-.right > button:focus{
-    background-color: #3a73d4;
+.right > button{
+  background-color: #4683ea;
+  outline-width: 0;
 }
+
+.right > button:focus{
+   background-color:#3a73d4;  
+   transition: 0.2s;
+}
+
+.right > button:active {
+    background-color:#3a73d4;
+    outline: 0;
+    transition: 1s;
+}
+
 
 .right > a > img{
     opacity:0.50;
@@ -114,11 +127,18 @@ body{
   z-index: 3;
   height: 44px;
   margin: 0 auto;
+  
+}
+
+input{
+ outline-width: 0;
+ padding: 20px;
 }
 
  .searchbar > input:hover{
    border-color: rgba(223,225,229,0);
    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+  
 }
 
 .search-buttons{
@@ -141,11 +161,13 @@ body{
     text-align: center;
     cursor: pointer;
     user-select: none;
+    
 }
 
-.sbutton:focus{
-  background-color: #3a73d4;
+.sbutton:hover{
+  border-color: #c4c4c4;
 }
+
 
 .footer{
   position: fixed;
