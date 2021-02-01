@@ -1,76 +1,68 @@
-body{
-    margin: 0;
+body{ 
+  margin: 0;
+  font-family: "arial", sans-serif;
+  color: #000000;
+  
 }
 
-
-*{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-header{
-    position: relative;
-    top: 16px;
-    color: #202124;
-    font-size: 13px;
-    font-family: "arial", sans-serif;
-}
-
-a {
-    color: #000000;
-    text-decoration: none;
-}
-
-a:visited{
-    color: #000000;
-}
-
-a:hover{
-    color: #000000;
-    text-decoration: underline;
+.topbar{
+  margin: auto;
+  display: block;
+  width: 100%;
+  height: 50px;
 }
 
 .left{
-    position: absolute;
-    width: 150px;
-    top: 7px;
-    left: 10px;
-    
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  width: 50%;
+  height: 50px;
 }
 
-.left a{
-    display: inline-block;
-    padding-left:15px;
-    opacity: 0.8;   
+.topbar a:hover{
+  text-decoration: underline;
+}
+
+.left > a, .right > a{
+  padding-left: 20px;
+  text-decoration: none;
+  font-size: 12px;
+  color: inherit;
 }
 
 .right{
-    position: absolute;
-    top: 2px;
-    right: 30px;
-    
-}
-
-.right a{
-    display: inline-block;
-    padding-left:15px;   
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 20px;
+  padding-right: 20px;
+  height: 50px;
 }
 
 .right > button {
-    background-color:#4484f0;
-    border: 1px solid #4285f4;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    width: 67px;
-    height: 30px;
-    margin-left: 15px;
-    user-select: none;
-    }
+  cursor: default;
+  margin-left: 20px;
+  padding: 0 12px 0 12px;
+  width: 70.5px;
+  height: 31px;
+  font-weight: bold;
+  background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+  border: none;
+  color: #ffffff;
+  border-radius: 2px;
+}
+
 
 .right > button:focus{
-    background-color: #3a73d4 ;
+    background-color: #3a73d4;
 }
 
 .right > a > img{
@@ -82,46 +74,66 @@ a:hover{
     opacity: 1;
 }
 
-.google > img {
-    position: relative;
-    margin: 175px 0 0 777px;
+
+.blank{
+  margin: auto;
+  width: 100%;
+  height: 100px;
+}
+
+
+.google{
+  position: relative;
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+
+.google > img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto
 }
 
 
 .searchbar{
-    position: relative;
-    margin: auto;
+  height: 50px;
+  margin: 25px 0 10px 0;
 }
 
-input{
-    width: 584px;
-    height: 44px;
-    padding-left:50px;
-    margin: 28px 0px 30px 600px;
-    border: 1px solid #dfe1e5;
-    background-color: transparent;
-    resize: none;
-    box-shadow: none;
-    border-radius: 24px;
+
+.searchbar > input{
+  width: 582px;
+  background: #fff;
+  display: flex;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  border-radius: 24px;
+  z-index: 3;
+  height: 44px;
+  margin: 0 auto;
 }
 
-input:hover{
-    border-color: rgba(223,225,229,0);
-    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+ .searchbar > input:hover{
+   border-color: rgba(223,225,229,0);
+   box-shadow: 0 1px 6px rgba(32,33,36,.28);
 }
 
 .search-buttons{
-    padding-left:770px;
+  width: 100%;
+  text-align: center;
 }
 
-.search-buttons > button{
+.sbutton {
     background-color: #f8f9fa;
     border: 1px solid #f8f9fa;
     border-radius: 4px;
     color: #3c4043;
     font-family: arial,sans-serif;
     font-size: 14px;
-    margin: 8px 4px;
+    margin: 11px 4px;
     padding: 0 16px;
     line-height: 27px;
     height: 36px;
@@ -131,75 +143,103 @@ input:hover{
     user-select: none;
 }
 
-.search-buttons > button:hover{
-    border: 1px solid #cecece;
-}
-
-
-footer{
-    font-family: "arial", sans-serif;
-    height: 80px;
-    position: fixed;
-    display: block;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.sbutton:focus{
+  background-color: #3a73d4;
 }
 
 .footer{
-    display: flex;
+  position: fixed;
+  bottom: 0;
+  text-align: left;
+  font-family: "arial", sans-serif;
+  font-size: 15px;
+  color: #0000008A;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+}
+
+.footer0{
+  position: relative;
+  width:100%;
+  height: 40px;
+  background: #f2f2f2;
+  line-height: 39px;
+  border-top: 1px solid #dadce0;
+  padding-left: 30px;
+} 
+
+
+.footer1{
+  position: relative;
+  bottom:0;
+  left:0;
+  display: block;
+  width:100%;
+  height: 40px;
+  background-color: #f2f2f2;
+  line-height: 40px;
+  border-top: 1px solid #dadce0;
+  padding-left: 30px;
+}
+
+
+.fleft{
+    float: left;
     text-align: left;
-    height: 40px;
-    width: 100%;
-    background-color: #f2f2f2;
-    color: #717171;
-    border: 1px solid #dadce0;
-    font-size: 11pt;
 }
 
-.footer > .p0 {
-    padding-left: 20px;
+.fright{
+  position: absolute;
+  display: block;
+  right: 0;
+  float: right;
+  margin-right: 10px;
+  text-align: right;
 }
 
-.p1{
-    text-align: left;
+.footer1 > span > a{
+  text-align: left;
+  font-family: "arial", sans-serif;
+  font-size: 15px;
+  color: #0000008A;
+  padding: 0 25px 0 0;
+  text-decoration: none;
 }
 
-.p1 > ul{
-    padding: 0;
-    position: relative;
-    display: flex;
-    text-align: left;
-    vertical-align: middle;
-    list-style-type: none;
+.footer1 > span > a:hover{
+  text-decoration: underline;
 }
 
-.p1 > ul > li{
-    padding-left: 20px;
+@media(max-width:612px){
+  .footer1{
+    height: 120px;
+    display: block;
+    background-color: #f2f2f2; 
+    }
+  .footer1 > span > a{
+    font-size: 12px;
+    display:flex;
+    flex-direction: column;
+  }
 }
 
 
-.p1 > ul > li > a {
-    color: #717171;
+@media(max-width:560px)
+{
+  .google > img{
+    width:100%;
+  }
+  .searchbar > input{
+    width:100%;
+  }
+  
 }
 
-
-.p2 > ul{
-    padding: 0;
-    width: 180px;
-    position: relative;
-    display: flex;
-    text-align: left;
-    list-style-type: none;
-    margin-left: 1290px;
-    position: relative;
-    text-align: center;
-}
-
-.p2 > ul > li{  
-    padding-left: 20px;
-}
-
-.p2 > ul > li > a {
-    color: #717171;
+@media(max-width:360px){
+   .topbar{
+    display: none;
+  } 
 }
